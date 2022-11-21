@@ -1,25 +1,49 @@
 import React from "react";
+import { createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PostsListPage from "./pages/PostsListPage";
-import PostFormPage from "./pages/PostFormPage";
 import ShowPostPage from "./pages/ShowPostPage";
 import AboutUsPage from "./pages/AboutUsPage";
-import Navbar from '../components/Navbar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import CustomBtn from "./components/CustomBtn";
 
 import "./App.css";
 
-function Navigation(props) {
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main:"#2e1667",
+    },
+    secondary: {
+      main:"#c7d8ed",
+    },
+  },
+  typography: {
+    fontFamily: [
+      'Roboto'
+    ],
+    h4: {
+      fontWeight: 600,
+      fontSize: 28,
+      lineHeight: '2rem',
+      },
+    h5: {
+      fontWeight: 100,
+      lineHeight: '2rem',
+    },
+  },
+});
+
+/*function Navigation(props) {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Micro Blog
+          Practice
         </Link>
         <ul className="navbar-nav me-auto">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/posts/new">
-              Create a Micro Post
+            <NavLink className="nav-link" to="">
+              Visualization
             </NavLink>
           </li>
           <li className="nav-item">
@@ -31,25 +55,31 @@ function Navigation(props) {
       </div>
     </nav>
   );
-}
+} */
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navigation />
-      <div className="container-xl text-center">
-        <div className="row justify-content-center">
-          <Routes>
-            <Route path="/posts/new" element={<PostFormPage />} />
-            <Route path="/posts/:id" element={<ShowPostPage />} />
-            <Navbar />
-            <Route path="/about-us" element={<AboutUsPage />} />
-            <Route path="/" element={<PostsListPage />} />
-          </Routes>
-        </div>
-      </div>
-    </BrowserRouter>
+    <div className = "App">
+      <ThemeProvider theme = {theme}>
+        <CustomBtn/>
+      </ThemeProvider>
+    </div>
   );
 }
 
 export default App;
+
+/*
+<BrowserRouter>
+<Navigation />
+<div className="container-xl text-center">
+  <div className="row justify-content-center">
+    <Routes>
+      <Route path="/posts/:id" element={<ShowPostPage />} />
+      <Route path="/about-us" element={<AboutUsPage />} />
+      <Route path="/" element={<PostsListPage />} />
+    </Routes>
+  </div>
+</div>
+</BrowserRouter>
+*/
