@@ -1,11 +1,11 @@
 # CTP Project Starter - AlgoViz
 
 Current Color Palette:
--263944
--3E573B
--F4F6F5
--4C9EBF
--2E312E
+- 263944
+- 3E573B
+- F4F6F5
+- 4C9EBF
+- 2E312E
 
 A full stack web application starter template for building projects with React, Express.js, and Sequelize.js
 
