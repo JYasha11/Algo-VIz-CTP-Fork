@@ -4,7 +4,7 @@ const db = require('../db');
 const Questions = db.define('questions', {
 
     question_url:{
-        type: Sequelize.STRING()
+        type: Sequelize.STRING
     },
     question_comment:{
         type: Sequelize.STRING(10000)
@@ -16,4 +16,4 @@ const Questions = db.define('questions', {
     }
 });
 
-module.exports = Entries;
+module.exports = Questions;

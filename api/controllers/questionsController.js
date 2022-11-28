@@ -1,4 +1,4 @@
-const Questions = require('../api/models/questions');
+const Questions = require('../models/questions');
 
 
 const getAllQuestions = async (req, res) =>{

@@ -20,11 +20,9 @@ db.authenticate()
 // routers to endpoints
 const questionsRouter = require("./api/routes/questionsRoutes");
 const userRouter = require("./api/routes/userRoutes");
-const authRouter = require("./api/routes/authRoutes");
 
 app.use("/api/questions", questionsRouter);
 app.use("/api/users", userRouter);
-app.use("/api/auth", authRouter);
 
 const syncDb = () => db.sync({ alter: true });
 //use force:true if you want to clear the database tables

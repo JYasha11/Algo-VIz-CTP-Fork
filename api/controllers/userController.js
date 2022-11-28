@@ -1,7 +1,5 @@
 const {Users} = require('../models');
 const {Questions} = require('../models');
-const jwt = require('jsonwebtoken');
-const {secret} = require('../../config/auth.config');
 
 const getAllUsers = async(req, res) =>{
     try{
@@ -15,32 +13,11 @@ const getAllUsers = async(req, res) =>{
 
 const getSingleUser = async(req, res) =>{
     try{
-        const header = req.headers['authorization'];
-
-    if(typeof header !== 'undefined') {
-        const bearer = header.split(' ');
-        const token = bearer[1];
-        jwt.verify(token, secret, (err, authorizedData) =>{
-            if(err){
-                //If error send Forbidden (403)
-                console.log('ERROR: Could not connect to the protected route');
-                res.sendStatus(403);
-            } else {
-                //If token is successfully verified, we can send the autorized data 
-                res.json({
-                    message: 'Successful log in',
-                    authorizedData
-                });
-                console.log('SUCCESS: Connected to protected route');
-            }
-        })
-    }
-        res.send('no.');
-        // const user = await Users.findOne({where: {email: req.params.email}});
-        // res.status(200).send(user);
+        const user = await Users.findOne({where: {email: req.params.email}});
+        res.status(200).send(user);
     }catch(err){
         console.error(err);
-        res.status(500).send(`Unable to find user with ${req.params.id}`);
+        res.status(500).send(`Unable to find user with ${req.params.email}`);
     }
 }
 
@@ -90,4 +67,4 @@ const deleteUser = async(req, res) =>{
 }
 
 
-module.exports={getAllUsers,getSingleUser, createUser, updateUser, deleteUser};
+module.exports={getAllUsers, getSingleUser, createUser, updateUser, deleteUser};
