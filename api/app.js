@@ -6,7 +6,6 @@ const db = require("./models");
 const PORT = process.env.PORT || 5001;
 
 const app = express();
-app.use(cors());
 app.use(express.json()); // work with JSON data
 
 // test db connection and start server
