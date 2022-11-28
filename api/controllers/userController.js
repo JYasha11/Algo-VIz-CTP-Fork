@@ -1,5 +1,5 @@
-const {Users} = require('../models');
-const {Questions} = require('../models');
+const {Users} = require('../db/models');
+const {Questions} = require('../db/models');
 
 const getAllUsers = async(req, res) =>{
     try{

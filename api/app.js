@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
-const db = require("./models");
+const db = require("./db");
 
 const PORT = process.env.PORT || 5001;
 
@@ -17,8 +17,8 @@ db.authenticate()
   .catch((err) => console.log("Unable to connect", err.message));
 
 // routers to endpoints
-const questionsRouter = require("./api/routes/questionsRoutes");
-const userRouter = require("./api/routes/userRoutes");
+const questionsRouter = require("./routes/questionsRoutes");
+const userRouter = require("./routes/userRoutes");
 
 app.use("/api/questions", questionsRouter);
 app.use("/api/users", userRouter);
