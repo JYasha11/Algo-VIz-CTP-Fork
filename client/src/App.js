@@ -1,28 +1,24 @@
 import React from "react";
 import { createMuiTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
-import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
-import PostsListPage from "./pages/PostsListPage";
-import ShowPostPage from "./pages/ShowPostPage";
-import AboutUsPage from "./pages/AboutUsPage";
-import { BrowserRouter as Router, Routes, Route}
-    from 'react-router-dom';
-
+import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 import "./App.css";
 
 function App() {
   return (
-      <Router>
+    <BrowserRouter>
       <Routes>
-          <Route path='/about' element={<HomePage/>} />
-         {/* 
+        <Route path="" element={<HomePage />} />
+           
+          {/* 
           //<Route path='/contact' element={<Contact/>} />
           //<Route path='/blogs' element={<Blogs/>} />
           //<Route path='/sign-up' element={<SignUp/>} />
           */}
            
       </Routes>
-      </Router>
+    </BrowserRouter>
   );
   }
     

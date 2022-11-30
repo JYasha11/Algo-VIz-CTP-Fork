@@ -1,7 +1,7 @@
-import NavBar from './components/NavBar'
-import Grid from './components/Grid'
+import NavBar from '../components/NavBar'
+import Grid from '../components/Grid'
 import {Typography} from '@material-ui/core'; 
-import Footer from './components/Footer'
+import Footer from '../components/Footer'
 import { createMuiTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
 
 //changes to imports 
