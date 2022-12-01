@@ -2,6 +2,7 @@ import React from "react";
 import { createMuiTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
 import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import SignInPage from "./pages/SignInPage";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="" element={<HomePage />} />
+        <Route path="sign-in" element={<SignInPage />} />
            
           {/* 
           //<Route path='/contact' element={<Contact/>} />
