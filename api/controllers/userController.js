@@ -1,9 +1,10 @@
-const {sequelize, User} = require ('../models');
+const {sequelize, User, Question} = require ('../models');
+const question = require('../models/question');
 
 
 const getAllUsers = async(req, res) =>{
     try{
-        const users = await User.findAll()
+        const users = await User.findAll({include:'questions'})
         res.status(200).send(users);
     }catch(err){
         console.error(err);
@@ -14,7 +15,7 @@ const getAllUsers = async(req, res) =>{
 const getSingleUser = async(req, res) =>{
     const uuid = req.params.uuid
     try{
-        const user = await User.findOne({where: {uuid}});
+        const user = await User.findOne({where: {uuid}, include:'questions'});
         res.status(200).send(user);
     }catch(err){
         console.error(err);

@@ -3,7 +3,7 @@ const { getAllQuestions,createQuestion, updateQuestion, deleteQuestion } = requi
 const questionsRouter = express.Router();
 
 questionsRouter.get('/', getAllQuestions);
-questionsRouter.post('/create-entry', createQuestion);
-questionsRouter.patch('/update-entry/:entryId', updateQuestion);
-questionsRouter.delete('/delete-entry/:entryId', deleteQuestion);
+questionsRouter.post('/create-question', createQuestion);
+questionsRouter.patch('/update-question/:uuid', updateQuestion);
+questionsRouter.delete('/delete-entry/:uuid', deleteQuestion);
 module.exports = questionsRouter;
