@@ -1,9 +1,9 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
-const db = require("./db");
+const {sequelize, users, questions} = require ('./models');
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5432;
 
 const app = express();
 app.use(express.json()); // work with JSON data

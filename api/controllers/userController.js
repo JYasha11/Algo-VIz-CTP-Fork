@@ -1,9 +1,9 @@
-const {Users} = require('../db/models');
-const {Questions} = require('../db/models');
+const {sequelize, User} = require ('../models');
+
 
 const getAllUsers = async(req, res) =>{
     try{
-        const users = await Users.findAll({ include: Questions})
+        const users = await User.findAll()
         res.status(200).send(users);
     }catch(err){
         console.error(err);
@@ -12,8 +12,9 @@ const getAllUsers = async(req, res) =>{
 }
 
 const getSingleUser = async(req, res) =>{
+    const uuid = req.params.uuid
     try{
-        const user = await Users.findOne({where: {email: req.params.email}});
+        const user = await User.findOne({where: {uuid}});
         res.status(200).send(user);
     }catch(err){
         console.error(err);
@@ -23,14 +24,13 @@ const getSingleUser = async(req, res) =>{
 
 const createUser = async(req, res) =>{
     try{
-        if (await Users.findOne({where: {email: req.body.email}}) !== null){
+        if (await User.findOne({where: {email: req.body.email}}) !== null){
             res.status(500).send('email exists');
         } 
         else{
-            await Users.create({
-            username: req.body.username,
+            await User.create({
+            name: req.body.name,
             email: req.body.email,
-            password: req.body.password
             })
             res.status(200).send('user created');
         }
@@ -43,11 +43,7 @@ const createUser = async(req, res) =>{
 const updateUser = async(req, res) =>{
     try{
       
-        const user = await Users.findOne({
-            where: {
-                id: req.params.id
-            }
-        });
+        const user = await User.findOne({where: {uuid}});
         await user.update(req.body);
         res.status(200).send('updated user');
 
@@ -57,13 +53,17 @@ const updateUser = async(req, res) =>{
 }
 
 const deleteUser = async(req, res) =>{
-    try{
-        await Users.destroy({where: {id: req.params.id}});
-        res.status(200).send('deleted user');
+    const uuid = req.params.uuid
+  try {
+    const user = await User.findOne({ where: { uuid } })
 
-    }catch(err){
-        res.status(500).send('unable to delete user');
-    }
+    await user.destroy()
+
+    return res.json({ message: 'User deleted!' })
+  } catch (err) {
+    console.log(err)
+    return res.status(500).json({ error: 'Cannot delete user' })
+  }
 }
 
 
