@@ -15,7 +15,7 @@ const getAllUsers = async(req, res) =>{
 const getSingleUser = async(req, res) =>{
     const uuid = req.params.uuid
     try{
-        const user = await User.findOne({where: {uuid}, include:'questions'});
+        const user = await User.findOne({where: {email: req.body.email}, include:'questions'});
         res.status(200).send(user);
     }catch(err){
         console.error(err);

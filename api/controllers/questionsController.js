@@ -12,12 +12,12 @@ const getAllQuestions = async (req, res) =>{
 }
 
 const createQuestion = async (req, res) =>{
-    const { userUuid, url, comment, is_completed } = req.body
+    const { userUuid, url, comment, isCompleted } = req.body
 
   try {
     const user = await User.findOne({ where: { uuid: userUuid } })
 
-    const question = await Question.create({ url, comment, is_completed, userId: user.id })
+    const question = await Question.create({ url, comment, isCompleted, userId: user.id })
 
     return res.json(question)
   } catch (err) {
@@ -31,13 +31,13 @@ const updateQuestion = async (req, res) =>{
         const updateId = req.params.uuid;
         const updated = req.body;
     
-        const question = await Question.findByPk(updateId);
+        const question = await Question.findOne({where:{uuid:updateId}});
         if(!question) res.status(404).send(`No question found with ID ${updateId}`)
-        await entry.update(req.body);
+        await question.update(req.body);
         
         res.status(200).send(`updated entry with 
-        ${updated.question_comment} 
-        ${updated.is_completed}`);
+        ${updated.comment} 
+        ${updated.isCompleted}`);
     }
     catch(err){
         console.error(err);
@@ -47,7 +47,7 @@ const updateQuestion = async (req, res) =>{
 const deleteQuestion = async (req, res) =>{
     try{
         const questionId = req.params.uuid;
-        const question = await Question.findByPk(questionId);
+        const question = await await Question.findOne({where:{uuid:updateId}});
         question.destroy();
         res.status(200).send('destroyed');
     }catch(err){
