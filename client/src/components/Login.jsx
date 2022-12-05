@@ -14,7 +14,7 @@ const Login=()=>{
             <Paper elevation={20} style={paperStyle}>
                 <Grid align='center'>
                      <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
-                    <h2>Sign In</h2>
+                    <h2>Log In</h2>
                 </Grid>
                 <TextField label='Username' placeholder='Enter username' fullWidth required/>
                 <TextField label='Password' placeholder='Enter password' type='password' fullWidth required/>

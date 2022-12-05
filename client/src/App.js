@@ -2,7 +2,7 @@ import React from "react";
 import { createMuiTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
 import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import SignInPage from "./pages/SignInPage";
+import SignUpOrIn from './containers/SignUpOrIn';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 
@@ -13,11 +13,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="" element={<HomePage />} />
-        <Route path="log-in" element={<Login />} />
-        <Route path="sign-up" element={<Signup />} />
+      
+        <Route path = "test" element ={<SignUpOrIn />} />
 
            
           {/* 
+          <Route path="log-in" element={<Login />} />
+          <Route path="sign-up" element={<Signup />} />
           //<Route path='/contact' element={<Contact/>} />
           //<Route path='/blogs' element={<Blogs/>} />
           //<Route path='/sign-up' element={<SignUp/>} />
