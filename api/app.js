@@ -1,28 +1,30 @@
-const express = require("express");
-const morgan = require("morgan");
-const path = require("path");
-const {sequelize, users, questions} = require ('./models');
+const express = require('express')
+const {sequelize, User, Question} = require ('./models');
+const PORT = process.env.PORT || 5000;
+const app = express()
+app.use(express.json())
 
-const PORT = process.env.PORT || 5432;
 
-const app = express();
-app.use(express.json()); // work with JSON data
 
-// test db connection and start server
-db.authenticate()
+sequelize.authenticate()
   .then(() => {
     console.log("Successfully connected to the database");
     app.listen(PORT, () => console.log(`Connected to server on Port: ${PORT}`));
   })
   .catch((err) => console.log("Unable to connect", err.message));
 
-// routers to endpoints
-const questionsRouter = require("./routes/questionsRoutes");
 const userRouter = require("./routes/userRoutes");
+const questionsRouter = require("./routes/questionsRoutes");
 
-app.use("/api/questions", questionsRouter);
 app.use("/api/users", userRouter);
+app.use("/api/questions", questionsRouter);
 
-const syncDb = () => db.sync({ alter: true });
+// app.listen({ port: 5000 }, async () => {
+//     console.log('Server up on http://localhost:5000')
+//     await sequelize.authenticate()
+//     console.log("database connected")
+// }) 
+
+const syncDb = () => sequelize.sync({ alter: true });
 //use force:true if you want to clear the database tables
 syncDb();
