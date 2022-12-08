@@ -22,17 +22,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate:{
-        notNull: {msg: 'User must have a name'},
-        notEmpty: {msg: 'Name must not be empty'}
-      }
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {
     sequelize,

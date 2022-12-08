@@ -15,6 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Question.init({
+    name:{
+      type:DataTypes.STRING
+    },
     uuid:{
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
@@ -30,7 +33,13 @@ module.exports = (sequelize, DataTypes) => {
     isCompleted:{
       type:DataTypes.BOOLEAN,
       defaultValue:false
+    },
+
+    difficulty:{
+      type: DataTypes.STRING
     }
+
+    //add difficulties and languages
   }, {
     sequelize,
     tableName:'questions',

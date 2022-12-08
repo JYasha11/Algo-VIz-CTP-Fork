@@ -30,8 +30,9 @@ const createUser = async(req, res) =>{
         } 
         else{
             await User.create({
-            name: req.body.name,
+            //name: req.body.name,
             email: req.body.email,
+            password: req.body.password
             })
             res.status(200).send('user created');
         }
