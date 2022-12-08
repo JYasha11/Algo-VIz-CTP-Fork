@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import SecurityIcon from '@material-ui/icons/Security';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
+import SortingVisualizer from "./components/sortingVisualizer/SortingVisualizer";
 
 import "./App.css";
 
@@ -105,6 +106,7 @@ function App() {
           </div>
           <div className={classes.bigSpace}>
             <Footer/>
+            <SortingVisualizer/>
           </div>
         </ThemeProvider>
       </div>
