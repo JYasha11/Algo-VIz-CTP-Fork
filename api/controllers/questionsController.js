@@ -12,12 +12,12 @@ const getAllQuestions = async (req, res) =>{
 }
 
 const createQuestion = async (req, res) =>{
-    const { userUuid, url, comment, isCompleted } = req.body
+    const { userUuid, name, url, comment, isCompleted, difficulty } = req.body
 
   try {
     const user = await User.findOne({ where: { uuid: userUuid } })
 
-    const question = await Question.create({ url, comment, isCompleted, userId: user.id })
+    const question = await Question.create({ name, url, comment, isCompleted, difficulty, userId: user.id })
 
     return res.json(question)
   } catch (err) {
