@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-route
 import HomePage from "./pages/HomePage";
 import SignUpOrIn from './containers/SignUpOrIn';
 
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import SortingVisualizer from "./components/sortingVisualizer/SortingVisualizer";
 
 import "./App.css";
 
