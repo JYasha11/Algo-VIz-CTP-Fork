@@ -2,14 +2,14 @@ import NavBar from '../components/NavBar'
 import Grid from '../components/Grid'
 import {Typography} from '@material-ui/core'; 
 import Footer from '../components/Footer'
-import { createMuiTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
+import { createTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
 
 //changes to imports 
 import SecurityIcon from '@material-ui/icons/Security';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
       primary: {
         main:"#2e1667",
@@ -35,6 +35,9 @@ const theme = createMuiTheme({
   });
 
   const styles = makeStyles({
+    root: {
+      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    },
     wrapper: {
       width: "65%",
       margin: "auto",

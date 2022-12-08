@@ -1,10 +1,8 @@
 import React from "react";
-import { createMuiTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
 import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpOrIn from './containers/SignUpOrIn';
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+
 
 import "./App.css";
 
