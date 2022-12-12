@@ -4,21 +4,24 @@ import {withStyles} from '@material-ui/core/styles';
 
 const StyledButton = withStyles({
     root: {
+        boxShadow: "transparent",
+        border: "transparent",
         fontSize: "24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         height: "50px",
-        padding: "0 25px",
+        padding: "0 45px",
         boxSizing: "border-box",
-        borderRadius: 0, 
-        background: "#4f25f7",
-        color: "#fff",
+        borderRadius: "0", 
+        background: "#5377fc",
+        color: "#000000",
         transform: "none",
-        boxShadow: "6px 6px 0 0 #c7d8ed",
         transition: "background .3s,border-color .3s,color .3s",
         "&:hover": {
-            backgroundColor:  "#4f25f7"
+            backgroundColor:  "#4f25f7",
+            color: "#fff",
+
           },
     },
     label: {

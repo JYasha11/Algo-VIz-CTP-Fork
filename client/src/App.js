@@ -1,20 +1,21 @@
 import React from "react";
-import { createMuiTheme, ThemeProvider, makeStyles} from '@material-ui/core/styles';
 import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import { HomePage } from "./pages/HomePage";
 import SignUpOrIn from './containers/SignUpOrIn';
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import AboutUsPage from "./pages/AboutUsPage";
+import { NavBar } from "./components/NavBar";
 
 import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="" element={<HomePage />} />
-      
-        <Route path = "test" element ={<SignUpOrIn />} />
+    <>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path = "about" element={<AboutUsPage/>} />
+          <Route exact path = "sign-in" element ={<SignUpOrIn />} />
 
            
           {/* 
@@ -25,8 +26,9 @@ function App() {
           //<Route path='/sign-up' element={<SignUp/>} />
           */}
            
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
   }
     
