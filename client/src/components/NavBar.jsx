@@ -70,7 +70,7 @@ export const NavBar = () => {
                         <NavButton txt = "Contact Us"/>
                     </NavLink>
 
-                    <NavLink style = {navLinkStyles} to ='/log-in/'>
+                    <NavLink style = {navLinkStyles} to ='/sign-in/'>
                         <CustomBtn txt="Log In"/>
                     </NavLink>
                 </Toolbar>  

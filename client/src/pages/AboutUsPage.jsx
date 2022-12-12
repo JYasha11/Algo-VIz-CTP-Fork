@@ -1,40 +1,34 @@
 import React from "react";
+import "./AboutUsPage.css";
+import smiley1 from "../assets/smiley1.jpg"
 
-function AboutUsPage(props) {
+export const AboutUsPage = () => {
   return (
     <>
-      <div className="col text-center">
-        <h2 className="mb-3">About our project</h2>
-        <p className="mb-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          quidem adipisci nobis quia eum quaerat quos ducimus, deleniti
-          exercitationem animi itaque iste illo reiciendis vitae atque
-          necessitatibus voluptatum repellendus quisquam?
-        </p>
-        <h2 className="mb-3">About our Team</h2>
-        <div className="row">
-          <div className="col-lg-6">
-            <h3>Firstname Lastname</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Dignissimos in itaque nihil consectetur qui natus similique
-              nostrum molestias, ipsa explicabo hic impedit aspernatur. Ipsa
-              provident neque culpa alias incidunt amet.
-            </p>
-          </div>
-          <div className="col-lg-6">
-            <h3>Firstname Lastname</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Dignissimos in itaque nihil consectetur qui natus similique
-              nostrum molestias, ipsa explicabo hic impedit aspernatur. Ipsa
-              provident neque culpa alias incidunt amet.
-            </p>
-          </div>
+    <section class ="team">
+      <div>
+        <h1>We are The AlgoViz Team</h1>
+
+        <div id="elian">
+          <h2>Elian T</h2>
+          <img src="smiley1"/>
+          <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
+
+        <div id="jon">
+          <h2>Jonathan Y</h2>
+          <img
+            src="/assests/smiley1.jpg"
+            alt="Jon's picture"
+          />
+          <p class="description">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
       </div>
+      </section>
     </>
-  );
+  )
 }
-
-export default AboutUsPage;

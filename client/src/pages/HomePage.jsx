@@ -11,7 +11,7 @@ import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 const theme = createTheme({
     palette: {
       primary: {
-        main:"#2e1667",
+        main:"#06030d",
       },
       secondary: {
         main:"#c7d8ed",

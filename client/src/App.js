@@ -1,11 +1,17 @@
 import React from "react";
-import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-router-dom";
+import "./App.css";
+
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
+import { QuestionsPage } from "./pages/QuestionsPage";
+import { VisualizationPage } from "./pages/VisualizationPage";
+import { SocialPage } from "./pages/SocialPage";
+import { ContactPage } from "./pages/ContactPage";
+
 import SignUpOrIn from './containers/SignUpOrIn';
-import AboutUsPage from "./pages/AboutUsPage";
+import {AboutUsPage} from "./pages/AboutUsPage";
 import { NavBar } from "./components/NavBar";
 
-import "./App.css";
 
 function App() {
   return (
@@ -15,6 +21,11 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path = "about" element={<AboutUsPage/>} />
+          <Route exact path = "practice" element={<QuestionsPage/>} />
+          <Route exact path = "vis" element={<VisualizationPage/>} />
+          <Route exact path = "social" element={<SocialPage/>} />
+          <Route exact path = "contact-us" element={<ContactPage/>} />
+
           <Route exact path = "sign-in" element ={<SignUpOrIn />} />
 
            
@@ -26,7 +37,7 @@ function App() {
           //<Route path='/sign-up' element={<SignUp/>} />
           */}
            
-        </Routes>
+      </Routes>
       </BrowserRouter>
     </>
   );
