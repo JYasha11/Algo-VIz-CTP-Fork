@@ -6,8 +6,7 @@ import SignUpOrIn from './containers/SignUpOrIn';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import SortingVisualizer from "./components/sortingVisualizer/SortingVisualizer";
-import Question from "./components/Question";
-import data from "./data";
+
 
 import "./App.css";
 
@@ -30,13 +29,6 @@ function App() {
           */}
            
       </Routes>
-  <SortingVisualizer/>
-  
-  <Question
-   name = {data[0].name}
-   url = {data[0].url}
-   difficulty = {data[0].difficulty}
-   comment = {data[0].comment}  />
     </BrowserRouter>
   );
   }
