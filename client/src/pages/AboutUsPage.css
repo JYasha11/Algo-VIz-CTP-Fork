@@ -1,4 +1,45 @@
+h1,h2,p{
+  font-family: 'Roboto', sans-serif;  
+}
+
+h2 {
+  font-size: 40px;
+}
+span {
+  font-weight: bold;
+}
+
+#team {
+  margin: 20px;
+  border:2px solid;
+  border-style: hidden;
+  padding: 10px;
+  height: 75px;
+  text-align: center;
+  justify-content: center;    
+  width: 35%;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.649);
+  background-color: #5377FC;
+  color: rgb(238, 238, 238);
+}
+
+#team-div {
+  justify-content: center;
+  display: flex;
+}
+
 #elian {
+  padding-top: 20px;
+  margin: 20px;
+  border:2px solid;
+  border-color: #fff;
+  height: 300px;    
+  box-shadow: 0 0 40px #000;
+  background-color: #e8f5fd85;
+}
+
+#jon {
+  padding-top: 20px;
   margin: 20px;
   border:2px solid;
   border-color: #fff;
@@ -12,12 +53,24 @@
   overflow: hidden;
   padding-left: 20px;
   line-height: 35px;
-  font-size: 18px;
+  font-size: 22px;
   margin-right: 3px;
 }
 
+
 section{
-  color: rgb(0, 0, 0);
+  color:rgb(26, 26, 26);
   align-items: center;
   text-align: center;
+}
+
+section img{
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  margin-left: 20px;
+  margin-top: 0;
+  box-shadow: -10px 30px 30px rgba(0, 0, 0, 0.401);
+  object-fit: cover;
 }

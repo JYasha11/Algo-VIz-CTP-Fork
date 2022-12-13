@@ -62,10 +62,6 @@ export const NavBar = () => {
                         <NavButton txt = "Visualization"/>
                     </NavLink>
 
-                    <NavLink style = {navLinkStyles} to ='/social/'>
-                        <NavButton txt = "Social"/>
-                    </NavLink>
-
                     <NavLink style = {navLinkStyles} to ='/contact-us/'>
                         <NavButton txt = "Contact Us"/>
                     </NavLink>
