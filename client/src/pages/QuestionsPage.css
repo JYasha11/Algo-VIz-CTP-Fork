@@ -40,3 +40,8 @@ th {
   background-color: rgba(136, 185, 249, 0.657);
   color: rgb(68, 68, 68);
 }
+
+a{
+  font-size: 100px;
+  font-family: 'Roboto', sans-serif;  
+}

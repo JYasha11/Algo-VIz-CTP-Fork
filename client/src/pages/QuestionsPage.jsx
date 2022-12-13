@@ -1,7 +1,7 @@
 import React from 'react';
 import Question from "../components/Question";
 import data from "../data";
-import NavBar from '../components/NavBar';
+//import NavBar from '../components/NavBar';
 
 const questions = data.map(question =>{
     return <Question
@@ -13,11 +13,10 @@ const questions = data.map(question =>{
                 />
 })
 
-export default function QuestionsPage(props) {
+export function QuestionsPage(props) {
     return(
         <>
             <div>
-                <NavBar/>
                 {questions}
             </div>
         </>

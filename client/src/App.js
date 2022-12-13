@@ -20,6 +20,7 @@ function App() {
         <Route path="" element={<HomePage />} />
       
         <Route path = "test" element ={<SignUpOrIn />} />
+        <Route path="questions" element={<QuestionsPage />} />
 
            
           {/* 

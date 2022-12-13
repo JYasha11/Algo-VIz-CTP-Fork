@@ -7,7 +7,7 @@ import SecurityIcon from '@material-ui/icons/Security';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
       primary: {
         main:"#06030d",
