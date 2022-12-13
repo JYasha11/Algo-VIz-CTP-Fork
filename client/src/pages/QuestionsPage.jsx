@@ -13,11 +13,12 @@ const questions = data.map(question =>{
                 />
 })
 
-function QuestionsPage(props) {
+export default function QuestionsPage(props) {
     return(
         <>
             <div>
-                
+                <NavBar/>
+                {questions}
             </div>
         </>
     );
