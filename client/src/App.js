@@ -1,26 +1,27 @@
 import React from "react";
-import { BrowserRouter, Routes, Router, Route, Link, NavLink } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import SignUpOrIn from './containers/SignUpOrIn';
-import QuestionsPage from "./pages/QuestionsPage";
+import "./App.css";
 
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { QuestionsPage } from "./pages/QuestionsPage";
+import { VisualizationPage } from "./pages/VisualizationPage";
+import { SocialPage } from "./pages/SocialPage";
+import { ContactPage } from "./pages/ContactPage";
+
+import SignUpOrIn from './containers/SignUpOrIn';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import SortingVisualizer from "./components/sortingVisualizer/SortingVisualizer";
 
-
-import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-    
-<Routes>
+      <Routes>
         <Route path="" element={<HomePage />} />
       
         <Route path = "test" element ={<SignUpOrIn />} />
-        <Route path="/practice" element={<QuestionsPage />} />
 
+           
           {/* 
           <Route path="log-in" element={<Login />} />
           <Route path="sign-up" element={<Signup />} />
@@ -28,8 +29,8 @@ function App() {
           //<Route path='/blogs' element={<Blogs/>} />
           //<Route path='/sign-up' element={<SignUp/>} />
           */}
-          
-  </Routes>
+           
+      </Routes>
     </BrowserRouter>
   );
   }

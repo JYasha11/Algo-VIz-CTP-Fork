@@ -1,1 +1,8 @@
-/* Add custom CSS here */
+body{
+        background-image: url("bg.svg");      
+        height: 100vh;
+        margin-top:-30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+      

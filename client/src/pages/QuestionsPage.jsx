@@ -17,10 +17,9 @@ function QuestionsPage(props) {
     return(
         <>
             <div>
-            <NavBar />
-            {questions}
+                
             </div>
         </>
     );
 }
-export default QuestionsPage;
+

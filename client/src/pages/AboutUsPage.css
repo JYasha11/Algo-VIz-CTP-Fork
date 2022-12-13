@@ -1,0 +1,23 @@
+#elian {
+  margin: 20px;
+  border:2px solid;
+  border-color: #fff;
+  height: 300px;    
+  box-shadow: 0 0 40px #000;
+  background-color: #e8f5fd85;
+}
+
+.description{
+  text-align: left;
+  overflow: hidden;
+  padding-left: 20px;
+  line-height: 35px;
+  font-size: 18px;
+  margin-right: 3px;
+}
+
+section{
+  color: rgb(0, 0, 0);
+  align-items: center;
+  text-align: center;
+}
