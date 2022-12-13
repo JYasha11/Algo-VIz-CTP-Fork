@@ -3,7 +3,9 @@ import React from "react";
 
 const questionStyle ={
     padding: "20px",
-    margin:"15px",
+    marginRight:"auto",
+    marginLeft:"auto",
+    marginTop:"15px",
     width: "50%",
     display: "flex-column",
     justifyContent: "space-between",
