@@ -5,7 +5,22 @@
   }
   
   .array-bar {
-    width: 2px;
+    width: 6px;
     display: inline-block;
     margin: 0 1px;
   }
+
+  button{
+  background-color: #4F25F7; 
+  margin:"3px";
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
+  }
+
+ 
