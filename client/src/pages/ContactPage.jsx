@@ -7,45 +7,11 @@ import { withStyles } from "@material-ui/core/styles";
   /*https://mailtrap.io/blog/react-contact-form/*/
 }
 
-const styles = {
-  contact: {
-    alignItems: "center",
-    justifyContent: "center",
-    display: "flex",
-  },
-  form: {
-    width: "50%",
-    textAlign: "center",
-  },
-  label: {
-    color: "rgb(26, 26, 26)",
-    fontSize: "28px",
-    alignItems: "left",
-    display: "flex",
-    border: "hidden",
-    width: "25%",
-    borderRadius: "8px",
-    padding: "5px 15px 5px 20px",
-    justifyContent: "center",
-    backgroundColor: "rgba(220, 224, 239, 0.54)",
-  },
-  input: {
-    marginBottom: "30px",
-    marginTop: "10px",
-    padding: "20px",
-    border: "2px solid",
-  },
-  p: {
-    fontSize: "40px",
-    width: "100%",
-    marginBottom: "30px",
-    color: "white",
-  },
-};
-
 const WhiteTextTypography = withStyles({
   root: {
     color: "#FFFFFF",
+    textShadow: "1px 4px 4px #454444",
+
     width: "60%",
     display: "flex",
     alignItems: "center",

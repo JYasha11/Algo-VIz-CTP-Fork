@@ -13,7 +13,7 @@ const SignUpOrIn = () => {
     setValue(newValue);
   };
 
-  const paperStyle = { width: 340, margin: "20px auto" };
+  const paperStyle = { width: 380, height: 750, margin: "20px auto" };
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
 

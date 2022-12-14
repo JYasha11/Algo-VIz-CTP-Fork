@@ -3,13 +3,13 @@ import {getMergeSortAnimations} from './sortingAlgorithms';
 import './SortingVisualizer.css';
 
 // Change this value for the speed of the animations.
-const ANIMATION_SPEED_MS = 5;
+const ANIMATION_SPEED_MS = 50;
 
 // Change this value for the number of bars (value) in the array.
-const NUMBER_OF_ARRAY_BARS = 200;
+const NUMBER_OF_ARRAY_BARS = 75;
 
 // This is the main color of the array bars.
-const PRIMARY_COLOR = 'turquoise';
+const PRIMARY_COLOR = 'white';
 
 // This is the color of array bars that are being compared throughout the animations.
 const SECONDARY_COLOR = 'red';
@@ -88,7 +88,11 @@ export default class SortingVisualizer extends React.Component {
     const {array} = this.state;
 
     return (
-      <div className='sorting-visualizer'>
+      <div>
+        <div class = "heading">        
+          <h1>Sorting Algorithms</h1>
+        </div>
+        <div className='sorting-visualizer'>
         <div className="array-container">
           {array.map((value, idx) => (
             <div
@@ -99,8 +103,8 @@ export default class SortingVisualizer extends React.Component {
                 height: `${value}px`,
               }}></div>
           ))}
-          <div>
-            <button onClick={() => this.resetArray()}>Generate New Array</button>
+          <div class = "array-buttons">
+            <button class = "gen-array" onClick={() => this.resetArray()}>Generate New Array</button>
             <button onClick={() => this.mergeSort()}>Merge Sort</button>
             <button onClick={() => this.quickSort()}>Quick Sort</button>
             <button onClick={() => this.heapSort()}>Heap Sort</button>
@@ -108,6 +112,8 @@ export default class SortingVisualizer extends React.Component {
           </div>
         </div>
       </div>
+      </div>
+      
     );
   }
 }
