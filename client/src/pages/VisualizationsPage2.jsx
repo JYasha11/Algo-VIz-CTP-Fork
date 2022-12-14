@@ -4,8 +4,8 @@ import LinkedList from "../components/LinkedList";
 
 export const VisualizationsPage2 = () => {
   return (
-    <div> 
+    <div>
       <SortingVisualizer />
-    </div>>
-  )
+    </div>
+  );
 };

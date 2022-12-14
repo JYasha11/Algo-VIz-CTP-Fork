@@ -6,3 +6,6 @@ body{
         background-repeat: no-repeat;
 }
       
+.MuiFormHelperText-root {
+        color: red !important;
+}
