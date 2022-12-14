@@ -1,7 +1,6 @@
 import React from 'react';
 import Question from "../components/Question";
 import data from "../data";
-//import NavBar from '../components/NavBar';
 
 const questions = data.map(question =>{
     return <Question

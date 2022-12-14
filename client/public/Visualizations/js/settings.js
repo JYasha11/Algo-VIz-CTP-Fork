@@ -1,3 +1,4 @@
+import{setAnimationsTimeOuts} from "./LinkedList"
 document.addEventListener('DOMContentLoaded', () => {
 
   // Side Menu

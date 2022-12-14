@@ -1,8 +1,9 @@
 import React from "react";
+import SortingVisualizer from "../components/sortingVisualizer/SortingVisualizer"
 
 export const VisualizationsPage2 = () => {
-  return (
-    <>
+  return (<>
+    <div>
       <div id="settings">
         <div className="menu-header">
           <div id="close-menu">
@@ -117,6 +118,6 @@ export const VisualizationsPage2 = () => {
           </div>
         </section>
       </main>
-    </>
+    </div><SortingVisualizer/></>
   );
 };

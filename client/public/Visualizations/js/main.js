@@ -1,3 +1,7 @@
+import add from "./LinkedList"
+import nodes from "./LinkedList"
+import {removeData, removeIndex, set} from "./LinkedList"
+
 document.addEventListener('DOMContentLoaded', function() {
   "use strict";
 
