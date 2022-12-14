@@ -14,13 +14,15 @@ span {
   border:2px solid;
   border-style: hidden;
   padding: 10px;
+  padding-top: 15px;
   height: 75px;
   text-align: center;
   justify-content: center;    
   width: 35%;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.649);
-  background-color: #5377FC;
+  background-color: #4F25F7;
   color: rgb(238, 238, 238);
+  border-radius: 30px;
 }
 
 #team-div {
@@ -36,6 +38,7 @@ span {
   height: 300px;    
   box-shadow: 0 0 40px #000;
   background-color: #e8f5fd85;
+  border-radius: 30px;
 }
 
 #jon {
@@ -46,6 +49,7 @@ span {
   height: 300px;    
   box-shadow: 0 0 40px #000;
   background-color: #e8f5fd85;
+  border-radius: 30px;
 }
 
 .description{
