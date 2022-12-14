@@ -5,11 +5,12 @@ import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { QuestionsPage } from "./pages/QuestionsPage";
 import { VisualizationPage } from "./pages/VisualizationPage";
-import { ContactPage } from "./pages/ContactPage";
 import { AboutUsPage } from "./pages/AboutUsPage";
 import { NavBar } from "./components/NavBar";
 import ProfilePage from "./pages/ProfilePage";
 import SignUpOrIn from './containers/SignUpOrIn';
+import ContactPage from "./pages/ContactPage";
+
 
 
 
