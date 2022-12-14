@@ -4,7 +4,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { QuestionsPage } from "./pages/QuestionsPage";
-import VisualizationPage  from "./pages/Visualizations/VisualizationPage";
+import VisualizationPage  from "./pages/VisualizationPage";
 import { AboutUsPage } from "./pages/AboutUsPage";
 import { NavBar } from "./components/NavBar";
 import ProfilePage from "./pages/ProfilePage";
